@@ -11,8 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
 	if [ -f /etc/redhat-release ]; then
 		echo "Redhat Linux detected."
-		echo "This OS is not supported with this script at present. Sorry."
-		echo "Please refer to https://github.com/paritytech/substrate for setup information."
+		$MAKE_ME_ROOT yum -y groupinstall 'Development Tools'
 		exit 1
 	elif [ -f /etc/SuSE-release ]; then
 		echo "Suse Linux detected."
